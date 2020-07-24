@@ -2,8 +2,7 @@
  * Copyright 2017-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { Observable, Operation, NextLink } from 'apollo-link';
-import { ApolloLink } from 'apollo-link';
+import { ApolloLink, Observable, Operation, NextLink } from '@apollo/client';
 import { ExecutionResult } from 'graphql';
 import { print } from 'graphql/language/printer';
 

@@ -2,13 +2,12 @@
  * Copyright 2017-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ApolloLink, Observable, Operation, FetchResult } from "apollo-link";
+import { ApolloError, ApolloLink, Observable, Operation, FetchResult } from "@apollo/client";
+import { getMainDefinition } from "@apollo/client/utilities";
+import { FieldNode } from "graphql";
 
 import { rootLogger } from "./utils";
 import * as Paho from './vendor/paho-mqtt';
-import { ApolloError } from "apollo-client";
-import { FieldNode } from "graphql";
-import { getMainDefinition } from "apollo-utilities";
 
 const logger = rootLogger.extend('subscriptions');
 const mqttLogger = logger.extend('mqtt');

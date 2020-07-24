@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import { ApolloError } from 'apollo-client';
-import { Observable, Operation } from 'apollo-link';
-import { ApolloLink } from 'apollo-link';
-import { getOperationDefinition } from "apollo-utilities";
+import { Observable, Operation } from '@apollo/client';
+import { ApolloLink } from '@apollo/client';
+import { getOperationDefinition } from "@apollo/client/utilities";
 import { ExecutionResult, GraphQLError } from 'graphql';
 
 import upload from "./complex-object-link-uploader";

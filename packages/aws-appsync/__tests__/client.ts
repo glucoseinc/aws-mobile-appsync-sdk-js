@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 import { v4 as uuid } from "uuid";
-import { Observable } from "apollo-link";
+import { Observable } from "@apollo/client";
 import { AWSAppSyncClientOptions, AWSAppSyncClient, AUTH_TYPE, ConflictResolutionInfo, ConflictResolver } from "../src/client";
 import { Store } from "redux";
 import { OfflineCache } from "../src/cache/offline-cache";
@@ -20,7 +20,7 @@ jest.mock("@redux-offline/redux-offline/lib/defaults/detectNetwork", () => (call
     // Setting initial network online status
     callback({ online: true });
 });
-jest.mock('apollo-link-http', () => ({
+jest.mock('@apollo/client/link/http', () => ({
     createHttpLink: jest.fn(),
 }));
 let mockHttpResponse: (responses: any[] | any, delay?: number) => void;
@@ -33,7 +33,7 @@ beforeEach(() => {
     jest.isolateModules(() => {
         const { AWSAppSyncClient } = require('../src/client');
         ({ isOptimistic } = require("../src/link/offline-link"));
-        ({ createHttpLink } = require("apollo-link-http"));
+        ({ createHttpLink } = require("@apollo/client/link/http"));
         ({ Signer } = require("aws-appsync-auth-link"));
 
         factory = (opts) => {

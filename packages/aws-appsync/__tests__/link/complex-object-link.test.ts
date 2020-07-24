@@ -1,4 +1,4 @@
-import { ApolloLink, execute, Observable } from "apollo-link";
+import { ApolloLink, execute, Observable } from "@apollo/client";
 import gql from 'graphql-tag';
 import { complexObjectLink, ComplexObjectLink } from "../../src/link/complex-object-link";
 import * as S3 from 'aws-sdk/clients/s3';
@@ -181,7 +181,7 @@ test('Is run for mutations with multiple S3Objects (array)', done => {
 });
 
 test('https://github.com/awslabs/aws-mobile-appsync-sdk-js/issues/237', done => {
-    Object.keys = (obj) => { 
+    Object.keys = (obj) => {
         if (typeof obj !== 'object') {
             fail("Object.keys was called with a non-object");
         }

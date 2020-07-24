@@ -2,8 +2,8 @@
  * Copyright 2017-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ApolloLink, Operation, NextLink, Observable } from "apollo-link";
-import { RetryLink } from "apollo-link-retry";
+import { ApolloLink, Operation, NextLink, Observable } from "@apollo/client";
+import { RetryLink } from "@apollo/client/link/retry";
 import { getOperationFieldName, passthroughLink } from "../utils";
 import { AWSAppsyncGraphQLError } from "../types";
 import { ConflictResolver } from "../client";

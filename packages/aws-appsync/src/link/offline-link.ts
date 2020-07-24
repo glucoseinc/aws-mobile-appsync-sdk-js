@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import { defaultNormalizedCacheFactory, NormalizedCacheObject } from "apollo-cache-inmemory";
-import { ApolloLink, Observable, Operation, execute, GraphQLRequest, NextLink, FetchResult } from "apollo-link";
-import { getOperationDefinition, getMutationDefinition, resultKeyNameFromField, tryFunctionOrLogError } from "apollo-utilities";
+import { ApolloLink, Observable, Operation, execute, GraphQLRequest, NextLink, FetchResult } from "@apollo/client";
+import { getOperationDefinition, getMutationDefinition, resultKeyNameFromField, tryFunctionOrLogError } from "@apollo/client/utilities";
 import { PERSIST_REHYDRATE } from "@redux-offline/redux-offline/lib/constants";
 import { OfflineAction } from "@redux-offline/redux-offline/lib/types";
 import { FieldNode, ExecutionResult } from "graphql";

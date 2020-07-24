@@ -17,7 +17,7 @@ import { offlineEffectConfig as mutationsConfig } from './link/offline-link';
 import { NormalizedCacheObject, IdGetter } from 'apollo-cache-inmemory';
 import { OfflineAction, NetInfo, NetworkCallback } from '@redux-offline/redux-offline/lib/types';
 import { offlineEffectConfig as deltaSyncConfig } from "./deltaSync";
-import { Observable } from 'apollo-link';
+import { Observable } from '@apollo/client';
 
 const { detectNetwork } = defaultOfflineConfig;
 

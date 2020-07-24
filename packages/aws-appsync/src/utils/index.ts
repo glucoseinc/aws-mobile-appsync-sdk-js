@@ -4,7 +4,7 @@
  */
 import { DocumentNode, OperationDefinitionNode, FieldNode } from "graphql";
 import { resultKeyNameFromField } from "apollo-utilities";
-import { Observable } from "apollo-link";
+import { Observable } from "@apollo/client";
 
 const crypto = require('aws-sdk/global').util.crypto;
 

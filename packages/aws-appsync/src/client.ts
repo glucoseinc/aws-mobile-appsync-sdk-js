@@ -5,9 +5,9 @@
 import 'setimmediate';
 import ApolloClient, { ApolloClientOptions, MutationOptions, OperationVariables, MutationUpdaterFn } from 'apollo-client';
 import { InMemoryCache, ApolloReducerConfig, NormalizedCacheObject } from 'apollo-cache-inmemory';
-import { ApolloLink, Observable, FetchResult, NextLink } from 'apollo-link';
-import { createHttpLink } from 'apollo-link-http';
-import { getMainDefinition } from 'apollo-utilities';
+import { ApolloLink, Observable, FetchResult, NextLink } from '@apollo/client';
+import { createHttpLink } from '@apollo/client/link/http';
+import { getMainDefinition } from '@apollo/clientutilities';
 import { Store } from 'redux';
 
 import { OfflineCache, defaultDataIdFromObject } from './cache/index';
@@ -26,7 +26,7 @@ import { passthroughLink } from './utils';
 import ConflictResolutionLink from './link/conflict-resolution-link';
 import { createRetryLink } from './link/retry-link';
 import { boundEnqueueDeltaSync, buildSync, DELTASYNC_KEY, hashForOptions } from "./deltaSync";
-import { Subscription } from 'apollo-client/util/Observable';
+import { Subscription } from '@apollo/client';
 import { PERMANENT_ERROR_KEY } from './link/retry-link';
 
 
