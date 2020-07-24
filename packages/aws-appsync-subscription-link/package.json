@@ -23,7 +23,8 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@redux-offline/redux-offline": "2.5.2-native.0"
+    "@redux-offline/redux-offline": "2.5.2-native.0",
+    "aws-appsync-auth-link": "2.0.2-apollothree"
   },
   "peerDependencies": {
     "@apollo/client": "^3.0.2",
